@@ -20,3 +20,11 @@ class NoughtsNCrosses:
             print('| ' + ' | '.join(row) + ' |')
 
 
+def available_moves(self):
+    # return []
+    moves = []
+    for (i, spot) in enumerate(self.board):
+        if spot == ' ':
+            moves.append(i)
+    return moves
+

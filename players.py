@@ -24,7 +24,8 @@ class Computer(BasePlayer):
         super().__init__(tag)
 
     def get_move(self, game):
-        pass
+        # chooses a random available spot for their next move
+        square = random.choice(game.available_moves())
 
 
 class UserPlayer(BasePlayer):
@@ -36,4 +37,17 @@ class UserPlayer(BasePlayer):
         super().__init__(tag)
 
     def get_move(self, game):
-        pass
+        valid_square = False
+        value = None
+        while not valid_square:
+            square = input(self.tag + '\'s turn. Input move (0-8):')
+            # checking whether value is an integer ensures the user has input a valid number # noqa
+            # also checks whether the spot is available or not
+            try:
+                value = int(square)
+                if value not in game.available_moves():
+                    raise ValueError
+                valid_square = True
+            except ValueError:
+                print('Invalid square. Try again.')
+        return value
