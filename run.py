@@ -149,7 +149,7 @@ def intro():
     # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
     while True:
         difficulty = input("Please enter a difficulty, type in 'easy' or 'hard': \n") # noqa
-        if difficulty == str("hard") or str("easy"):
+        if difficulty == 'easy':
             print(f"You've selected {difficulty}, good luck!\n")
             break
         else:
