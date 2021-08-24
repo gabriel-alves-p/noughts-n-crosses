@@ -134,11 +134,22 @@ def run_easy_game():
 
 
 def intro():
-    print("Welcome to Noughts N' Crosses!")
+    # code credit: help from fellow slacker https://github.com/roomacarthur/escape-the-cave # noqa
+    print("███████████████████████████████████████")
+    print("█                                     █")
+    print("█   ▄▄█▄▄█▄▄   NOUGHTS                █")
+    print("█   ▄▄█▄▄█▄▄       &                  █")
+    print("█   X █  █ O       CROSSES            █")
+    print("█                                     █")
+    print("█                    BY GABRIEL ALVES █")
+    print("███████████████████████████████████████\n")
+    # end credit
+    print('Welcome to Noughts & Crosses!')
+
     # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
     while True:
         difficulty = input("Please enter a difficulty, type in 'easy' or 'hard': \n") # noqa
-        if difficulty == "hard" or "easy":
+        if difficulty == str("hard") or str("easy"):
             print(f"You've selected {difficulty}, good luck!\n")
             break
         else:
