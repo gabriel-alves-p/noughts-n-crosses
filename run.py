@@ -92,45 +92,60 @@ def play(game, x_player, o_player, print_game=True):
     if print_game:
         game.print_board_nums()
 
-    letter = 'X'  # starting tag
+    tag = 'X'  # starting tag
 
     while game.empty_squares():
         """
         iterate as long as the game-board still has empty squares
         gets move from appropriate player
         """
-        if letter == 'O':
+        if tag == 'O':
             square = o_player.get_move(game)
         else:
             square = x_player.get_move(game)
 
-        if game.make_move(square, letter):
+        if game.make_move(square, tag):
             if print_game:
-                print(letter + f' makes a move to square {square}')
+                print(tag + f' makes a move to square {square}')
                 game.print_board()
                 print('')  # empty line
 
             if game.current_winner:
                 if print_game:
-                    print(letter + ' wins!')
-                return letter
+                    print(tag + ' wins!')
+                return tag
 
             # alternates / switches players for each round
-            if letter == 'X':
-                letter = 'O'
+            if tag == 'X':
+                tag = 'O'
             else:
-                letter = 'X'
+                tag = 'X'
 
-        time.sleep(3)
+        time.sleep(2)  # a break in between moves to make the game more user friendly # noqa
     if print_game:
         print('It\'s a tie!')
 
 
-def main():
-    x_player = HumanPlayer('X')
-    o_player = RandomComputerPlayer('O')
-    t = TicTacToe()
-    play(t, x_player, o_player, print_game=True)
+def run_easy_game():
+    x_player = UserPlayer('X')
+    o_player = ComputerPlayer('O')
+    n_and_c = NoughtsAndCrosses()
+    play(n_and_c, x_player, o_player, print_game=True)
 
 
-main()
+def intro():
+    print("Welcome to Noughts N' Crosses!")
+    # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
+    while True:
+        difficulty = input("Please enter a difficulty, type in 'easy' or 'hard': \n") # noqa
+        if difficulty == "hard" or "easy":
+            print(f"You've selected {difficulty}, good luck!\n")
+            break
+        else:
+            print("You need to enter a valid difficulty to continue...\n")
+            continue
+    # end credit
+    run_easy_game()
+
+
+intro()
