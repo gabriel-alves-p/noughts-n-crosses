@@ -1,4 +1,5 @@
 import random
+import math
 
 
 class BasePlayer:
@@ -46,3 +47,17 @@ class UserPlayer(BasePlayer):
                 print('Invalid square. Try again.')
 
         return val
+
+
+# code credit: code for minimax algorithm taken from https://www.youtube.com/watch?v=8ext9G7xspg # noqa
+class GeniusComputerPlayer(BasePlayer):
+    def __init__(self, tag):
+        super().__init__(tag)
+
+    def get_move(self, game):
+        if len(game.available_moves()) == 9:
+            square = random.choice(game.available_moves())  # randomly choose one # noqa
+        else:
+            # get the square based off the minimax algorithm
+            square = self.minimax(game, self.tag)['position']
+        return square
