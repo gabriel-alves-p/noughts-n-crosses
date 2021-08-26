@@ -133,6 +133,13 @@ def run_easy_game():
     play(n_and_c, x_player, o_player, print_game=True)
 
 
+def run_hard_game():
+    x_player = UserPlayer('X')
+    o_player = GeniusComputerPlayer('O')
+    n_and_c = NoughtsAndCrosses()
+    play(n_and_c, x_player, o_player, print_game=True)
+
+
 def intro():
     # code credit: help from fellow slacker https://github.com/roomacarthur/escape-the-cave # noqa
     print("███████████████████████████████████████")
