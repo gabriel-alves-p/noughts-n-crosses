@@ -160,7 +160,7 @@ def intro():
             print(f"You've selected {difficulty}, good luck!\n")
             run_easy_game()
         elif difficulty == 'hard':
-            print(f"You've selected {difficulty}, good luck!\n")
+            print(f"You've selected {difficulty}, try your hardest to beat the computer!\n")  # noqa
             run_hard_game()
         else:
             print("You need to enter a valid difficulty to continue...\n")
