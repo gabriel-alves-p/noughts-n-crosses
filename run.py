@@ -1,4 +1,4 @@
-from players import UserPlayer, ComputerPlayer
+from players import UserPlayer, ComputerPlayer, GeniusComputerPlayer
 import time
 
 
