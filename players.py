@@ -61,3 +61,17 @@ class GeniusComputerPlayer(BasePlayer):
             # get the square based off the minimax algorithm
             square = self.minimax(game, self.tag)['position']
         return square
+
+    def minimax(self, state, player):
+        max_player = self.tag  # yourself
+        other_player = 'O' if player == 'X' else 'X'  # the other player
+
+        # firstly check whether the previous move was a winning move
+        if state.current_winner == other_player:
+            # we must keep track of position and score for minimax to work
+            return {
+                'position': None,
+                'score': 1 * (state.num_empty_squares() + 1) if other_player == max_player else -1 * (state.num_empty_squares() + 1)  # noqa
+            }
+        elif not state.num_empty_squares():  # no empty squares left
+            return {'position': None, 'score': 0}
