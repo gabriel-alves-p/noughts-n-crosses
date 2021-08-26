@@ -158,12 +158,14 @@ def intro():
         difficulty = input("Please enter a difficulty, type in 'easy' or 'hard': \n") # noqa
         if difficulty == 'easy':
             print(f"You've selected {difficulty}, good luck!\n")
-            break
+            run_easy_game()
+        elif difficulty == 'hard':
+            print(f"You've selected {difficulty}, good luck!\n")
+            run_hard_game()
         else:
             print("You need to enter a valid difficulty to continue...\n")
             continue
     # end credit
-    run_easy_game()
 
 
 intro()
