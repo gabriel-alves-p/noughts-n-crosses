@@ -37,7 +37,7 @@ class UserPlayer(BasePlayer):
         valid_square = False
         val = None
         while not valid_square:
-            square = input(self.tag + '\'s turn. Input move (0-8):')
+            square = input(self.tag + '\'s turn. Make a move (0-8):')
             try:
                 val = int(square)
                 if val not in game.available_moves():
