@@ -1,4 +1,5 @@
 from players import UserPlayer, ComputerPlayer, GeniusComputerPlayer
+from colorama import Fore, Style
 import time
 
 
@@ -10,6 +11,7 @@ class NoughtsAndCrosses:
     defines how to make moves
     defines winning moves
     """
+
     def __init__(self):
         self.board = [' ' for _ in range(9)]  # 3x3 game-board
         self.current_winner = None  # track the winner
@@ -142,11 +144,11 @@ def run_hard_game():
 
 def intro():
     # code credit: help from fellow slacker https://github.com/roomacarthur/escape-the-cave # noqa
-    print("███████████████████████████████████████")
+    print(Fore.YELLOW + "███████████████████████████████████████")
     print("█                                     █")
-    print("█   ▄▄█▄▄█▄▄   NOUGHTS                █")
+    print("█   ▄▄█▄▄█▄▄   " + Fore.BLUE + "NOUGHTS" + Fore.YELLOW + "                █")  # noqa
     print("█   ▄▄█▄▄█▄▄       &                  █")
-    print("█   X █  █ O       CROSSES            █")
+    print("█   " + Fore.RED + "X" + Fore.YELLOW + " █  █ " + Fore.BLUE + "O" + Fore.YELLOW + "       " + Fore.RED + "CROSSES" + Fore.YELLOW + "            █")  # noqa
     print("█                                     █")
     print("█                    BY GABRIEL ALVES █")
     print("███████████████████████████████████████\n")
@@ -155,7 +157,7 @@ def intro():
 
     # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
     while True:
-        difficulty = input("Please select a difficulty. Type in 'easy', 'hard' or 'quit' to exit: \n") # noqa
+        difficulty = input("Please select a difficulty. Type in 'easy', 'hard' or 'quit' to exit: \n").strip().lower()  # noqa
         if difficulty == 'easy':
             print(f"You've selected {difficulty}, good luck!\n")
             run_easy_game()
