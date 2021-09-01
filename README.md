@@ -2,18 +2,16 @@
 
 ![Screenshot of app being run on Heroku](documentation/logo.jpeg)
 
-- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses it's moves randomly, or a computer that maximizes it's gains whilst minimizing it's losses, making it unbeatable.
-
-- You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/)
-
 ## Author
 Gabriel Alves
 
 ## Project Overview
-- Include a recording of site that shows the terminal interaction.
-  https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb is a very intuitive and free tool to do a web recording.
-- One or two sentences providing an overview of your project.
-- Include a link to your deployed website
+
+https://user-images.githubusercontent.com/82375381/131251365-83d4d4c4-8af2-4f96-9415-71994382e0e3.mp4
+
+- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses it's moves randomly, or a computer that maximizes it's gains whilst minimizing it's losses, making it unbeatable.
+
+- You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/)
 
 ## Table of Contents
 Generate after readme is complete for UX and below
