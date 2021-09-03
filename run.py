@@ -177,7 +177,7 @@ def intro():
     print("█                    BY GABRIEL ALVES █")
     print("███████████████████████████████████████\n")
     # end credit
-    print('Welcome to Noughts & Crosses!')
+    print("Welcome to " + Fore.BLUE + "Noughts" + Fore.YELLOW + " & " + Fore.RED + "Crosses" + Fore.YELLOW + "!")  # noqa
 
     # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
     while True:
