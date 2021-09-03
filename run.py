@@ -5,16 +5,41 @@ import time
 
 class NoughtsAndCrosses:
     """
-    create a game-board for the game to run on
-    checks for available and invalid moves
-    counts empty squares
-    defines how to make moves
-    defines winning moves
+    A class to define the game.
+    ...
+
+    Methods
+    -------
+    print_board(self)
+        Prints out the game board to the terminal.
+
+    print_board_nums()
+        Prints out numbers corresponding to the empty spaces
+        which the user will be making a move to.
+
+    available_moves(self)
+        Appends an index to an empty list IF the spot is empty
+        and validates the move if the spot is empty.
+
+    empty_squares(self)
+        Returns/keeps track of all empty squares throughout the game.
+
+    make_move(self, square, tag)
+        Places the user's and the computer's tags according to the index provided.
+        If the index is an empty square, return True and make the move.
+        If the index is occupied, return False and invalidate the move.
+
+    winner(self, square, tag)
+        Checks whether the previous move was a winning move.
+        If so, return True and exit, otherwise, return False and keep the game going  # noqa
     """
 
     def __init__(self):
         self.board = [' ' for _ in range(9)]  # 3x3 game-board
         self.current_winner = None  # track the winner
+
+# code credit: help on how to print a game board to the terminal was taken from: https://stackoverflow.com/questions/44269612/python-drawing-a-tic-tac-toe-board  # noqa
+# and from: https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874  # noqa
 
     def print_board(self):
         # gets the rows
@@ -24,12 +49,14 @@ class NoughtsAndCrosses:
     @staticmethod
     def print_board_nums():
         """
-        tells us which number corresponds to each empty space
+        Tells us which number corresponds to each empty space
         i.e. 1 | 2 | 3 etc.
         """
         number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]  # noqa
         for row in number_board:
             print('| ' + ' | '.join(row) + ' |')
+
+# end credit
 
     def available_moves(self):
         moves = []
@@ -40,9 +67,6 @@ class NoughtsAndCrosses:
 
     def empty_squares(self):
         return ' ' in self.board
-
-    def num_empty_squares(self):
-        return self.board.count(' ')
 
     def make_move(self, square, tag):
         """
