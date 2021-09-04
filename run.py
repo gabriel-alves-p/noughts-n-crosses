@@ -5,7 +5,7 @@ import time
 
 class NoughtsAndCrosses:
     """
-    A class to define the game.
+    A class to define the game..
     ...
 
     Methods
