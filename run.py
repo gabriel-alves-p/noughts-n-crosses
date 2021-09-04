@@ -198,11 +198,17 @@ def intro():
     print("█                    BY GABRIEL ALVES █")
     print("███████████████████████████████████████\n")
     # end credit
+    time.sleep(2)
     print("Welcome to " + Fore.BLUE + "Noughts" + Fore.YELLOW + " & " + Fore.RED + "Crosses" + Fore.YELLOW + "!")  # noqa
-
+    time.sleep(2)
+    user = input("Please enter a username: \n")
+    time.sleep(2)
+    print(f"Hello {user}!")
+    time.sleep(2)
     # code credit: help from https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192 # noqa
     while True:
-        difficulty = input("Please select a difficulty. Type in 'easy', 'hard' or 'quit' to exit: \n").strip().lower()  # noqa
+        difficulty = input("Please select a difficulty to continue. Type in 'easy', 'hard' or 'quit' to exit: \n").strip().lower()  # noqa
+        time.sleep(2)
         if difficulty == 'easy':
             print(f"You've selected {difficulty}, good luck!\n")
             run_easy_game()
@@ -210,7 +216,7 @@ def intro():
             print(f"You've selected {difficulty}, try your hardest to beat the computer!\n")  # noqa
             run_hard_game()
         elif difficulty == 'quit':
-            print("Thanks for playing, goodbye!")
+            print(f"Thanks for playing {user}, goodbye!")
             break
         else:
             print("You need to enter a valid difficulty to continue...\n")
