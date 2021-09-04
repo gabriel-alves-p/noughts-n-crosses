@@ -1,5 +1,5 @@
 from players import UserPlayer, ComputerPlayer, GeniusComputerPlayer
-from colorama import Fore, Style
+from colorama import Fore
 import time
 
 
@@ -38,7 +38,7 @@ class NoughtsAndCrosses:
         self.board = [' ' for _ in range(9)]  # 3x3 game-board
         self.current_winner = None  # track the winner
 
-# code credit: help on how to print a game board to the terminal was taken from: https://stackoverflow.com/questions/44269612/python-drawing-a-tic-tac-toe-board  # noqa
+# code credit: help on how to print a game board to the terminal was taken from https://stackoverflow.com/questions/44269612/python-drawing-a-tic-tac-toe-board  # noqa
 # and from: https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874  # noqa
 
     def print_board(self):
@@ -58,6 +58,15 @@ class NoughtsAndCrosses:
 
 # end credit
 
+    def available_moves_display(self):
+        moves = []
+        for (i, spot) in enumerate(self.board):
+            if spot == ' ':
+                moves.append(str(i))
+            else:
+                moves.append(' ')
+        return moves
+
     def available_moves(self):
         moves = []
         for (i, spot) in enumerate(self.board):
@@ -67,6 +76,9 @@ class NoughtsAndCrosses:
 
     def empty_squares(self):
         return ' ' in self.board
+
+    def num_empty_squares(self):
+        return self.board.count(' ')
 
     def make_move(self, square, tag):
         """
