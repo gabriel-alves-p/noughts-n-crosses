@@ -1,4 +1,4 @@
-# NOUGHTS N CROSSES
+# NOUGHTS & CROSSES
 
 ![game logo](https://user-images.githubusercontent.com/82375381/132107968-b2bdb4ba-6f0c-4a7e-8e8b-5e0e3db7e062.jpeg)
 

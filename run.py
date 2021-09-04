@@ -43,14 +43,13 @@ class NoughtsAndCrosses:
 
     def print_board(self):
         print('')
-        print("  Game Board     Available Moves")
-        # gets the rows
-        available = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]  # noqa
-        for available_row in available:
-            availablePart = '| ' + ' | '.join(available_row) + ' |'
-        for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
-            boardPart = '| ' + ' | '.join(row) + ' |     '
-            print(boardPart + availablePart)
+        print("Available Moves       Game Board")
+        for num, row in enumerate([self.board[i*3:(i+1)*3] for i in range(3)]):
+            availableMoves = self.available_moves_display()
+            availableRow = availableMoves[num*3:(num+1)*3]
+            availablePart = '| ' + ' | '.join(availableRow) + ' |'
+            boardPart = '       | ' + ' | '.join(row) + ' |'
+            print(availablePart + boardPart)
 
     @staticmethod
     def print_board_nums():
