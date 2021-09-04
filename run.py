@@ -45,7 +45,8 @@ class NoughtsAndCrosses:
         print('')
         print("  Game Board     Available Moves")
         # gets the rows
-        for available_row in [self.board[i*3:(i+1)*3] for i in range(3)]:  # noqa
+        available = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]  # noqa
+        for available_row in available:
             availablePart = '| ' + ' | '.join(available_row) + ' |'
         for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
             boardPart = '| ' + ' | '.join(row) + ' |     '
@@ -59,7 +60,8 @@ class NoughtsAndCrosses:
         """
         number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]  # noqa
         for row in number_board:
-            print('| ' + ' | '.join(row) + ' |')
+            numered_board = '| ' + ' | '.join(row) + ' |'
+            print(numered_board)
 
         print('')
 
