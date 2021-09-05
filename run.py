@@ -5,7 +5,12 @@ import time
 
 class NoughtsAndCrosses:
     """
-    A class to define the game..
+    A class to define the game's structure:
+        Game board
+        Display board
+        Make a move with a tag
+        Validate the move
+        Check whether last move is a winning move
     ...
 
     Methods

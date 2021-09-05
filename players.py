@@ -4,7 +4,9 @@ import math
 
 class BasePlayer:
     """
-    define a class for the user as the player
+    Base Player class to select a tag (either X or O) and a game.
+    To be used as a superclass for the User, Computer
+    and Genius Computer classes below.
     """
 
     def __init__(self, tag):
@@ -16,7 +18,16 @@ class BasePlayer:
 
 class ComputerPlayer(BasePlayer):
     """
-    random computer player class, built on top of BasePlayer superclass
+    Random Computer Player class is used to define a computer
+    for the user to play against.
+    It makes its moves randomly according to what moves are available
+    on the game board.
+    ...
+
+    Methods
+    -------
+    get_move(self, game)
+        Makes a move to a random square according to game.available_moves()
     """
 
     def __init__(self, tag):
@@ -29,7 +40,16 @@ class ComputerPlayer(BasePlayer):
 
 class UserPlayer(BasePlayer):
     """
-    player class for the user to play as, built on top of BasePlayer superclass
+    User Player class defines the player the user will be playing as.
+    It allows the user to make a move and then validates the move.
+    ...
+
+    Methods
+    -------
+    get_move(self, game)
+        Loops through valid squares and continues for
+        as long as the square is valid.
+        If it is invalid, raises a ValueError and loops through again.
     """
 
     def __init__(self, tag):
@@ -39,7 +59,7 @@ class UserPlayer(BasePlayer):
         valid_square = False
         val = None
         while not valid_square:
-            square = input(self.tag + '\'s turn. Make a move (0-8):')
+            square = input(self.tag + '\'s turn. Make a move:')
             try:
                 val = int(square)
                 if val not in game.available_moves():
@@ -53,6 +73,25 @@ class UserPlayer(BasePlayer):
 
 # code credit: code for minimax algorithm taken from https://www.youtube.com/watch?v=8ext9G7xspg # noqa
 class GeniusComputerPlayer(BasePlayer):
+    """
+    Genius Computer Player is a class to define an unbeatable
+    computer player that uses a minimax algorithm to function.
+    The algorithm maximizes its score whilst minimizing its losses,
+    making it impossible to be beaten.
+    ...
+
+    Methods
+    -------
+    get_move(self, game)
+        If the Genius computer is making the first move, choose it randomly,
+        otherwise, use the algorithm to make a move.
+
+    minimax(self, state, player)
+        Keeps track of positions and score in dictionaries.
+        Use algorithm to simulate a game after previous move.
+        Update position and score dictionary.
+
+    """
     def __init__(self, tag):
         super().__init__(tag)
 
