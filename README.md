@@ -30,7 +30,7 @@ Generate after readme is complete for UX and below
 
 - Python3
 - JavaScript
-- HTMl
+- HTML
 - Markdown
 - GitHub
 - GitPod
@@ -91,9 +91,17 @@ the "quit" options offers the user a way to exit the game. Each option prints it
 
 ## Design Documents
 
-This section is where you would share logic diagrams and spreadsheets that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in a separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser. 
+- Code flow chart.
 
-The flowchart can be as simple as a picture of a drawing of how you envisioned laying out the logic for you project, or done with a professional tool such as powerpoint, googlesheets, or [https://app.diagrams.net/](https://app.diagrams.net/) They are a roadmap and do not have to be 100% accurate of the final product.
+<img width="986" alt="code-flow-chart" src="https://user-images.githubusercontent.com/82375381/132256579-d5fd8d2c-aeb1-42cb-b9c1-738cc1a2a8bb.png">
+
+<br>
+
+- Game flow chart.
+
+<img width="879" alt="game-flow-chart" src="https://user-images.githubusercontent.com/82375381/132256596-bbe57916-b829-401a-b629-7a70a7e5c86d.png">
+
+<br>
 
 ## Data Model
 In this section write our your data model(s).
