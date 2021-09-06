@@ -2,7 +2,6 @@
 
 ![game logo](https://user-images.githubusercontent.com/82375381/132107968-b2bdb4ba-6f0c-4a7e-8e8b-5e0e3db7e062.jpeg)
 
-
 ## Author
 Gabriel Alves
 
@@ -27,17 +26,60 @@ Generate after readme is complete for UX and below
 - Select your first move based on a numbered list of empty spots ranging from 0 to 8.
 - Await the computer's move and repeat the previous step until there are no empty spots left (a tie), or until either you or the computer score a straight line (vertically, horizontally or diagonally) to win.
 
+## Technologies
+
+- Python3
+- JavaScript
+- HTMl
+- Markdown
+- GitHub
+- GitPod
+- PyCharm
+- Heroku
+
 ## Features
-Use this section to itemize the features of your project. 
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-It's easiest to break this section down into piece parts or core functionality blocks such as data upload, user input, analysis and data output; focusing on the atomic functions and data model(s) you created to make the program work. 
-
 
 ### Implemented Features
-In each subsection, write out what the feature is for and what value it adds. If there is terminal interaction or output associated with the function, include a screenshot.
 
+- Game logo. Colored with Colorama library for aesthetic reasons.
+
+<img width="433" alt="game-logo" src="https://user-images.githubusercontent.com/82375381/132222001-18398f09-2434-478f-b995-e40b8569da94.png">
+
+<br>
+
+- Game intro. It was designed to introduce the player to the game. I used Python's time library to slow the messages down to allow the user time to read the messages as they appear. Here I also collect the user's username and then print a hello message to them, to make the game seem friendly.
+
+<img width="324" alt="game-intro" src="https://user-images.githubusercontent.com/82375381/132222617-e6d448b7-8be0-4abc-ac9e-52c8a55054ed.png">
+
+<br>
+
+- Difficulty choice. Here I give the user three options to proceed with the game. The choices are "easy", "hard" or "quit". With the "easy" choice, the user will be playing against a computer that randomly selects its moves, thus making it easily beaten. With the "hard" choice, the user will be playing against a genius computer which uses an algorithm to maximize its score whilst minimizing its losses, making it seemingly unbeatable. And ,finally,
+the "quit" options offers the user a way to exit the game. Each option prints its own personalized message to the user.
+
+<img width="883" alt="easy-difficulty" src="https://user-images.githubusercontent.com/82375381/132223330-0db190d4-5a53-486c-9673-c8104b961a91.png">
+<img width="890" alt="hard-difficulty" src="https://user-images.githubusercontent.com/82375381/132223342-f1027e8a-1883-4275-9061-44b795427a42.png">
+<img width="381" alt="quit-option" src="https://user-images.githubusercontent.com/82375381/132223348-6656f64f-823f-4486-8506-c287b49378f4.png">
+
+<br>
+
+- Making the first move. Once a difficulty has been chosen, the game then displays a game board to the user, it has numbers corresponding to each of the empty spaces where the user's tag (X or O) will go on. The user will then input a number (must be an available move ranging from 0 to 8 or the game will raise a ValueError and ask the user to re-input a valid number) and their tag will be added to the corresponding empty space. The game prints out updated versions of the available moves and game boards in between rounds and provides message feedback to the user, so the user knows what is happening in the game at all times.
+
+<img width="138" alt="availability-game-board" src="https://user-images.githubusercontent.com/82375381/132225450-4cae58d1-9129-4dcb-95e4-11ab50f7ac41.png">
+<img width="169" alt="available-moves" src="https://user-images.githubusercontent.com/82375381/132225554-2fc88833-6018-48f1-ae64-3da63123edca.png">
+<img width="183" alt="game-board" src="https://user-images.githubusercontent.com/82375381/132225585-5bb72a1b-54b7-4178-a417-0e98d8b49517.png">
+<img width="292" alt="make-move" src="https://user-images.githubusercontent.com/82375381/132225727-2d24c3cd-7c18-4a04-b3eb-60820b07baba.png">
+<img width="285" alt="validation" src="https://user-images.githubusercontent.com/82375381/132225964-d0714040-a7f9-43f8-8f88-c7a168c1f3a0.png">
+<img width="393" alt="game-play" src="https://user-images.githubusercontent.com/82375381/132225496-6fb95a6e-6e48-43f6-b853-4e058f10d721.png">
+
+<br>
+
+- Finding the winner. After each move, the game checks whether the previous move was a winning move (a straight line vertically, horizontally or diagonally) and if it does find a winning move, it awards it to the tag which the straight line was scored with. If there are no move available moves on the board and no one has won, the game sends a "tie" message.
+
+<img width="85" alt="x-win" src="https://user-images.githubusercontent.com/82375381/132228808-834ade44-3bd2-49bc-9342-e16bc2838622.png">
+<img width="81" alt="o-win" src="https://user-images.githubusercontent.com/82375381/132228813-0f88d34c-cdb8-4bc5-ac7b-58d33fe3e114.png">
+<img width="122" alt="tie" src="https://user-images.githubusercontent.com/82375381/132228817-eceb083a-9ce9-4c6c-be8d-27a003f03e6d.png">
+
+<br>
 
 ### Future Features
 
