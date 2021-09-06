@@ -127,17 +127,7 @@ You might want to include subsections that include how the data in the model is 
 
 ### Manual Testing
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Startup:
-    1. User enters name
-    2. try to submit no entry, blank name not allowed
-    3. Try to submit the name with spaces
-    4. Try to submit the name as special characters
-    5. Try to submit the name as calling a function in the code
-   
-    
-Here is a [Manual Testing Template](https://docs.google.com/spreadsheets/d/189VpSeEG9oevSRhvb2WZl8zCk9L3s2iWQyrJ_1jjAGQ/edit?usp=sharing) that you can use as a starting point to keep track of your testing efforts. Make a copy of it in your own account and update as needed to reflect the browsers you are testing and features.  
+- You will find my manual testing sheet [here](https://docs.google.com/spreadsheets/d/13o0Dz90fs4jI3M9rIsmxmlVFqfCWSbQBoOWfJUvsbwc/edit?usp=sharing).
 
 ### Commenting Code
 
@@ -173,10 +163,6 @@ Create a link to the issues dashboard  of your repository
 
 ### Defects of Note
 Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
-
-
-### Outstanding Defects
-It's ok to not resolve all the defects you found. If you know of something that isn't quite right, list it out and explain why you chose not to resolve it.
 
 ## Deployment
 
