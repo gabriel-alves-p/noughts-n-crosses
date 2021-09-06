@@ -105,6 +105,7 @@ class NoughtsAndCrosses:
             return True
         return False
 
+# code credit: help from https://stackoverflow.com/questions/39922967/python-determine-tic-tac-toe-winner # noqa
     def winner(self, square, tag):
         """
         winner if player ticks 3 in a row (either vertically, horizontally, or diagonally) # noqa
@@ -134,6 +135,7 @@ class NoughtsAndCrosses:
 
         # if all above fails
         return False
+# end credit
 
 
 def play(game, x_player, o_player, print_game=True):
