@@ -8,17 +8,24 @@ Gabriel Alves
 
 ## Project Overview
 
-
+![game-overview](https://user-images.githubusercontent.com/82375381/132195776-c33506c5-96db-418f-a962-0934ba8f5bbe.gif)
 
 - This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses it's moves randomly, or a computer that maximizes it's gains whilst minimizing it's losses, making it unbeatable.
 
-- You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/)
+- You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/).
 
 ## Table of Contents
 Generate after readme is complete for UX and below
 
 ## How To Play
-Paragraph or bullet points of how the user initiates the program and plays the game
+
+- Go to the [deployed website](https://noughts-n-crosses.herokuapp.com/).
+- Click on "Run Program".
+- Input your username.
+- Select difficulty (either "easy" or "hard").
+- You will be playing against a computer.
+- Select your first move based on a numbered list of empty spots ranging from 0 to 8.
+- Await the computer's move and repeat the previous step until there are no empty spots left (a tie), or until either you or the computer score a straight line (vertically, horizontally or diagonally) to win.
 
 ## Features
 Use this section to itemize the features of your project. 
