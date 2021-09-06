@@ -92,7 +92,6 @@ the "quit" options offers the user a way to exit the game. Each option prints it
 ## Design Documents
 
 - Code flow chart.
-
 <img width="986" alt="code-flow-chart" src="https://user-images.githubusercontent.com/82375381/132256579-d5fd8d2c-aeb1-42cb-b9c1-738cc1a2a8bb.png">
 
 <br>
@@ -100,16 +99,15 @@ the "quit" options offers the user a way to exit the game. Each option prints it
 - Game flow chart.
 
 <img width="879" alt="game-flow-chart" src="https://user-images.githubusercontent.com/82375381/132256596-bbe57916-b829-401a-b629-7a70a7e5c86d.png">
-
 <br>
 
 ## Data Model
+
 In this section write our your data model(s).
 
 You might want to include subsections that include how the data in the model is . initialized and then the methods that you created to update it through the program.
 
 ![image](https://user-images.githubusercontent.com/23039742/130148204-b56406bf-0fff-48f3-9dee-2f3cdbe67cc5.png)
-
 
 
 ## Python Libraries
@@ -121,20 +119,11 @@ You might want to include subsections that include how the data in the model is 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your features and ensure that they all work as intended in an easy and straightforward way for the users to achieve their goals.
-
 ### Validation Testing
-You should try to ensure you code is valid and follows proper indentation.  In this section you should write up any websites you used to validate your code. As your projects becomes more complex these tools may change.
 
-- [PEP8 Validator](http://pep8online.com/) include a screenshot of results
-
-If the line is too long just add 
-```$python 
-# noqa
-```
-There is a space before the # and after it to skip the quality assurance for that line.
-
-
+- Testing was done with [PEP8 Validator](http://pep8online.com/).
+<img width="625" alt="pep8-testing1" src="https://user-images.githubusercontent.com/82375381/132258505-46d1d087-6ecd-4419-90ce-1aef32264ee1.png">
+<img width="379" alt="pep8-testing2" src="https://user-images.githubusercontent.com/82375381/132258509-a8c8538c-d818-4fc0-b2de-fe0689a00a0e.png">
 
 ### Manual Testing
 
