@@ -112,10 +112,12 @@ You might want to include subsections that include how the data in the model is 
 
 
 
-## Libraries used
-List out the python libraries you purposefully used in your project and why. You can look at your requirements.txt file and go back to https://pypi.org/ to rediscover the purpose of a library if needed.
+## Python Libraries
 
-A bulleted list is a good presentation for this information.
+- Time: used the sleep() function in between messages to the user to allow time for reading.
+- Math: used to code the minimax algorithm to make the genius computer player.
+- Random: used to randomize the computer's moves in the "easy" mode and the first move the genius computer makes.
+- Colorama: used to color the game throughout.
 
 ## Testing
 
