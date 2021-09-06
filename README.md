@@ -83,9 +83,10 @@ the "quit" options offers the user a way to exit the game. Each option prints it
 
 ### Future Features
 
-Use this section to discuss plans for additional features to be implemented in the future:
-
-If you end up not developing some features you hoped to implement, you can include those in this section.
+- To store the user's score and present it to them once they decide to quit the game.
+- To give the user the option to choose which tag to start with.
+- To collect the user's favorite color and color their tag with it.
+- To further color the game throughout with Colorama.
 
 
 ## Design Documents
