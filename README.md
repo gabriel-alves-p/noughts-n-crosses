@@ -152,14 +152,7 @@ def yes_no(question):
 ```
 ### Defect Tracking
 
-You can use git hub issues to track any bugs rather than a spread sheet and just link to that page for your repository.
-
-![image](https://user-images.githubusercontent.com/23039742/130149053-bf506388-a791-426e-8ffc-a56c1212e01c.png)
-
-You should created issues in real time and close them out as you fix the bugs. Include steps to recreate and screenshots.
-
-Create a link to the issues dashboard  of your repository
-[ci_insights isssues](https://github.com/maliahavlicek/ci_mentor_insights/issues)
+- You will find my defect tracking sheet [here](https://docs.google.com/spreadsheets/d/1xYKKoZuA54QKtIxZ2fA6-BUdHOFavs1R6JX9CK3YZQM/edit?usp=sharing).
 
 ### Defects of Note
 Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
