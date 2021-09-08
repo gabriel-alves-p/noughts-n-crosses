@@ -133,10 +133,6 @@ You might want to include subsections that include how the data in the model is 
 
 - You will find my defect tracking sheet [here](https://docs.google.com/spreadsheets/d/1xYKKoZuA54QKtIxZ2fA6-BUdHOFavs1R6JX9CK3YZQM/edit?usp=sharing).
 
-### Defects of Note
-
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
-
 ## Deployment
 
 ### Heroku
