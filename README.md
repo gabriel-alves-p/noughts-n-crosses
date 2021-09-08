@@ -9,7 +9,7 @@ Gabriel Alves
 
 ![game-overview](https://user-images.githubusercontent.com/82375381/132195776-c33506c5-96db-418f-a962-0934ba8f5bbe.gif)
 
-- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses it's moves randomly, or a computer that maximizes it's gains whilst minimizing it's losses, making it unbeatable.
+- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses its moves randomly, or a computer that maximizes its gains whilst minimizing its losses, making it unbeatable.
 
 - You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/).
 
