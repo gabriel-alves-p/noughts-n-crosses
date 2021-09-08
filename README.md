@@ -129,43 +129,53 @@ You might want to include subsections that include how the data in the model is 
 
 - You will find my manual testing sheet [here](https://docs.google.com/spreadsheets/d/13o0Dz90fs4jI3M9rIsmxmlVFqfCWSbQBoOWfJUvsbwc/edit?usp=sharing).
 
-### Commenting Code
-
-Make sure you  use triple double quotes to document fuctions and classes.
- Here'a  documentation worthy example:
-```$python
-def yes_no(question):
-    """
-    Function to ask a simple yes no question of the user.
-    :param question: String displayed as the question
-    :return: answer: String equal to "1" or "2" representing yes or no respectfully
-    """
-    print(question)
-    print("yes = 1")
-    print("no = 2")
-    answer = input("enter your answer here \n").strip()
-    while answer not in ("1", "2"):
-        print("please choose 1 for yes and 2 for no")
-        answer = input("enter your answer here \n").strip()
-    return answer
-
-```
 ### Defect Tracking
 
 - You will find my defect tracking sheet [here](https://docs.google.com/spreadsheets/d/1xYKKoZuA54QKtIxZ2fA6-BUdHOFavs1R6JX9CK3YZQM/edit?usp=sharing).
 
 ### Defects of Note
+
 Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
 
 ## Deployment
 
 ### Heroku
-This section should describe the process you went through to deploy the project to Heroku. Include screenshots if you think they would make the process easier.
 
+- 1) Head to [Heroku](https://heroku.com) and create an account.
+- 2) Click on "Create New App".
+- 3) Name your app, select your region and click on "Create app".
 
+<img width="628" alt="deployment1" src="https://user-images.githubusercontent.com/82375381/132574725-c6cbeb6e-be0c-41ad-9c46-bb13929ddd16.png">
 
-You may want to re-watch the [python essentials deployment video](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/e3b664e16366444c8d722c5d8340b340/?child=first) when writing up this section.
+- 4) On your app's dashboard bar, click on "Settings" and then click on "Reveal Config Vars".
 
+<img width="641" alt="deployment2" src="https://user-images.githubusercontent.com/82375381/132574859-ec79920c-2f78-4e90-91e2-c107c5555d18.png">
+
+- 5) Enter a key with the value of "PORT" and a value with the value of "8000", then click on "Add".
+
+<img width="840" alt="deployment3" src="https://user-images.githubusercontent.com/82375381/132575015-01a907c0-4535-4f44-a825-930ca7e3e90e.png">
+
+- 6) Scroll down and click on "Add buildpack", select "python" and "Save changes".
+- 7) Repeat step 6 and select "nodejs" instead of "python" (they should be added in that order, python first and nodejs after).
+
+<img width="830" alt="deployment4" src="https://user-images.githubusercontent.com/82375381/132575097-06258f70-6951-44da-9573-3c9523c839c6.png">
+
+- 8) On your app's dashboard bar, click on "Deploy" and on the "Deployment method" section, select "GitHub".
+
+<img width="612" alt="deployment5" src="https://user-images.githubusercontent.com/82375381/132575159-ecea4127-2f51-4cf4-9a01-67847342e9d0.png">
+<img width="984" alt="deployment6" src="https://user-images.githubusercontent.com/82375381/132575228-308886b3-996d-4375-93b1-201bfc030dac.png">
+
+- 9) Search for your GitHub repository and click "Connect".
+
+<img width="1240" alt="deployment7" src="https://user-images.githubusercontent.com/82375381/132575314-f2669f55-3e25-4760-a64a-a3a82a9235cd.png">
+
+- 10) Scroll down and click on "Enable Automatic Deploys".
+
+<img width="1223" alt="deployment8" src="https://user-images.githubusercontent.com/82375381/132575399-29ded428-305b-4ef8-a7b1-4bd09ebdd1fc.png">
+
+- 11) Wait until all files have been installed and it should give you a "Your app was successfully deployed." message.
+
+<img width="835" alt="deployment9" src="https://user-images.githubusercontent.com/82375381/132575430-ceb70299-cb54-4f99-8a6c-301149a1332c.png">
 
 ## Credits
 
