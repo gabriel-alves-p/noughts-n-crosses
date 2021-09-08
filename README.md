@@ -179,21 +179,36 @@ Some defects are more pesky than others. Highlight 3-5 of the bugs that drove yo
 
 ## Credits
 
-To avoid plagiarism amd copyright infringement, you should mention any other projects, stackoverflow, videos, blogs, etc that you used to gather imagery or ideas for your code even if you used it as a starting point and modified things. Giving credit to other people's efforts and ideas that saved you time acknowledges the hard work others did. 
+### Code Institute
 
--[Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
+- [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
     - The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
 
-### Content
+### GitHub
 
-Use bullet points to list out sites you copied text from and cross-reference where those show up on your site
+- https://github.com/roomacarthur/escape-the-cave
+    - Help with printing out the logo board to the terminal.
 
-### Media
+### Stackoverflow
 
-Make a list of sites you used images from. If you used several sites try to match up each image to the correct site. This includes attribution for icons if they came from font awesome or other sites, give them credit.
+- https://stackoverflow.com/questions/39922967/python-determine-tic-tac-toe-winner
+    - Help finding the winner in the game.
+- https://stackoverflow.com/questions/42091015/check-if-python-input-contains-a-specific-word/42091192
+    - Help the game's intro loop that makes the user select one of three options.
+- https://stackoverflow.com/questions/44269612/python-drawing-a-tic-tac-toe-board and https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874
+    - Help with printing out the board to the terminal.
+
+### Tutorials
+
+- https://www.youtube.com/watch?v=BHh654_7Cmw
+- https://www.youtube.com/watch?v=5s_lGC2sxwQ and https://www.youtube.com/watch?v=jAaJZLqryTI
+- https://www.youtube.com/watch?v=n2o8ckO-lfk&t=954s
+- https://www.youtube.com/watch?v=8ext9G7xspg&t=4342s
 
 ### Acknowledgments
 
-This is the section where you refer to code examples, mentors, blogs, stack overflow answers and videos that helped you accomplish your end project. Even if it's an idea that you updated you should note the site and why it was important to your completed project.
+This project could only come to exist because of the help and support from:
 
-If you used a CodeInstitute Instructional project as a starting point. Make note of that here too.
+- My Code Institute mentor Malia Havlicek for being incredibly helpful and accessible.
+- The community on Slack (fellow students and mentors).
+- Code Institute for providing the accessible content from which I learned these new skills from.
