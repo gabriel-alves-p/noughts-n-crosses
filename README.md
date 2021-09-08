@@ -14,7 +14,27 @@ Gabriel Alves
 - You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/).
 
 ## Table of Contents
-Generate after readme is complete for UX and below
+
+- [How To Play](#how-to-play)
+- [Technologies](#technologies)
+- [Features](#features)
+  * [Implemented Features](#implemented-features)
+  * [Future Features](#future-features)
+- [Design Documents](#design-documents)
+- [Data Model](#data-model)
+- [Python Libraries](#python-libraries)
+- [Testing](#testing)
+  * [Validation Testing](#validation-testing)
+  * [Manual Testing](#manual-testing)
+  * [Defect Tracking](#defect-tracking)
+- [Deployment](#deployment)
+  * [Heroku](#heroku)
+- [Credits](#credits)
+  * [Code Institute](#code-institute)
+  * [GitHub](#github)
+  * [Stackoverflow](#stackoverflow)
+  * [Tutorials](#tutorials)
+  * [Acknowledgments](#acknowledgments)
 
 ## How To Play
 
