@@ -96,7 +96,7 @@ class NoughtsAndCrosses:
     def make_move(self, square, tag):
         """
         if the move is valid, proceed & return True
-        if the move is invalid, returns False
+        if the move is invalid, return False
         """
         if self.board[square] == ' ':
             self.board[square] = tag
@@ -161,7 +161,7 @@ def play(game, x_player, o_player, print_game=True):
             if print_game:
                 print(tag + f' makes a move to square {square}')
                 game.print_board()
-                print('')  # emprty line
+                print('')  # empty line
 
             if game.current_winner:
                 if print_game:
