@@ -9,12 +9,32 @@ Gabriel Alves
 
 ![game-overview](https://user-images.githubusercontent.com/82375381/132195776-c33506c5-96db-418f-a962-0934ba8f5bbe.gif)
 
-- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses it's moves randomly, or a computer that maximizes it's gains whilst minimizing it's losses, making it unbeatable.
+- This application was developed as part of my third Portfolio project with Code Institute. It is a Noughts & Crosses (or Tic Tac Toe) game developed with Python as it's only language and is a Player vs Computer style game. It contains two levels of difficulty, which are chosen by the user. The user can then either play against a computer which chooses its moves randomly, or a computer that maximizes its gains whilst minimizing its losses, making it unbeatable.
 
 - You can view my deployed app [here](https://noughts-n-crosses.herokuapp.com/).
 
 ## Table of Contents
-Generate after readme is complete for UX and below
+
+- [How To Play](#how-to-play)
+- [Technologies](#technologies)
+- [Features](#features)
+  * [Implemented Features](#implemented-features)
+  * [Future Features](#future-features)
+- [Design Documents](#design-documents)
+- [Data Model](#data-model)
+- [Python Libraries](#python-libraries)
+- [Testing](#testing)
+  * [Validation Testing](#validation-testing)
+  * [Manual Testing](#manual-testing)
+  * [Defect Tracking](#defect-tracking)
+- [Deployment](#deployment)
+  * [Heroku](#heroku)
+- [Credits](#credits)
+  * [Code Institute](#code-institute)
+  * [GitHub](#github)
+  * [Stackoverflow](#stackoverflow)
+  * [Tutorials](#tutorials)
+  * [Acknowledgments](#acknowledgments)
 
 ## How To Play
 
@@ -132,10 +152,6 @@ You might want to include subsections that include how the data in the model is 
 ### Defect Tracking
 
 - You will find my defect tracking sheet [here](https://docs.google.com/spreadsheets/d/1xYKKoZuA54QKtIxZ2fA6-BUdHOFavs1R6JX9CK3YZQM/edit?usp=sharing).
-
-### Defects of Note
-
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
 
 ## Deployment
 
