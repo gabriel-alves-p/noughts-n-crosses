@@ -121,14 +121,63 @@ the "quit" options offers the user a way to exit the game. Each option prints it
 <img width="879" alt="game-flow-chart" src="https://user-images.githubusercontent.com/82375381/132256596-bbe57916-b829-401a-b629-7a70a7e5c86d.png">
 <br>
 
-## Data Model
+## Classes
+I made 4 classes to help model the game.
 
-In this section write our your data model(s).
+### BasePlayer
+A base player is a generic representation of a player.
 
-You might want to include subsections that include how the data in the model is . initialized and then the methods that you created to update it through the program.
+#### Properties
+- **tag** the symbol to use to represent the player X or 0.
 
-![image](https://user-images.githubusercontent.com/23039742/130148204-b56406bf-0fff-48f3-9dee-2f3cdbe67cc5.png)
+#### Methods
+- **get_moves**  Method to choose a move based on a game's board.
 
+### ComputerPlayer
+A computer player is the computer in easy games, it is an extension of the BasePlayer class.
+ 
+#### Properties
+- **tag** The symbol to represent the player, set to 'O' when the game is initialized.
+ 
+#### Methods
+- **get_moves** For the easy game mode, the computer looks at the game's available moves and randomly chooses one.
+
+### UserPlayer
+A User Player represents the human player. It is an extension of the BasePlayer.
+ 
+#### Properties
+- **tag** The symbol to represent the human player, set to 'X' when the game is initialized.
+ 
+#### Methods
+- **get_moves** Allows a user to choose an available move from the game board by numeric association. It handles invalid input until the human complies.
+
+#### GeniusComputerPlayer
+When the user selects hard for the difficulty level, they play against the GeniusComputerPlayer which is an extension of the BasePlayer class.
+ 
+#### Properties
+- **tag** The symbol to represent the player, set to 'O' when the game is initialized
+ 
+#### Methods
+- **get_moves** For the hard game mode, the computer looks at the game's available moves and strategically chooses corners and blocks the human player from winning. All games will end in the computer winning or tying the game.
+- **minimax** Keeps track of positions and score in dictionaries. Uses algorithm to simulate a game after previous move.Update position and score dictionary.
+
+### Game
+A representation of the game of tic-tac-toe.
+ 
+#### Properties
+- **board** an array of 9 entries representing positions.
+- **current_winner** tracks if a player has won the game or not.
+- **computer** player representing the computer.
+- **player** player representing the human user.
+ 
+#### Methods
+- **print_board(self)** Prints out the game board to the terminal.
+- **print_board_nums()** Prints out numbers corresponding to the empty spaces which the user will be making a move to.
+- **available_moves(self)** Appends an index to an empty list IF the spot is empty and validates the move if the spot is empty.
+- **available_moves_display(self)** Creates a 9 digit array with blanks for moves taken so it's easy to print what moves the user can make next to the board.
+- **empty_squares(self)** Returns/keeps track of all empty squares throughout the game.
+- **make_move(self, square, tag)**  Places the user's and the computer's tags according to the index provided. If the index is an empty square, return True and make the move. If the index is occupied, return False and invalidate the move.
+- **winner(self, square, tag)** Checks whether the previous move was a winning move. If so, return True and exit, otherwise, return False and keep the game going.
 
 ## Python Libraries
 
@@ -142,7 +191,11 @@ You might want to include subsections that include how the data in the model is 
 ### Validation Testing
 
 - Testing was done with [PEP8 Validator](http://pep8online.com/).
+
+- PEP8 for "run.py".
 <img width="625" alt="pep8-testing1" src="https://user-images.githubusercontent.com/82375381/132258505-46d1d087-6ecd-4419-90ce-1aef32264ee1.png">
+
+- PEP8 for "players.py".
 <img width="379" alt="pep8-testing2" src="https://user-images.githubusercontent.com/82375381/132258509-a8c8538c-d818-4fc0-b2de-fe0689a00a0e.png">
 
 ### Manual Testing
