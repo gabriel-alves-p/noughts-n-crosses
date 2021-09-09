@@ -22,6 +22,11 @@ class NoughtsAndCrosses:
         Prints out numbers corresponding to the empty spaces
         which the user will be making a move to.
 
+    available_moves_display(self)
+        Indexes all empty squares as string numbers.
+        Once that move has been used, it assigns an empty space
+        to the string number.
+
     available_moves(self)
         Appends an index to an empty list IF the spot is empty
         and validates the move if the spot is empty.
@@ -30,7 +35,8 @@ class NoughtsAndCrosses:
         Returns/keeps track of all empty squares throughout the game.
 
     make_move(self, square, tag)
-        Places the user's and the computer's tags according to the index provided.
+        Places the user's and the computer's 
+        tags according to the index provided.
         If the index is an empty square, return True and make the move.
         If the index is occupied, return False and invalidate the move.
 
@@ -39,9 +45,16 @@ class NoughtsAndCrosses:
         If so, return True and exit, otherwise, return False and keep the game going  # noqa
     """
 
-    def __init__(self):
+    def __init__(self, game_mode):
         self.board = [' ' for _ in range(9)]  # 3x3 game board
         self.current_winner = None  # track the winner
+        if game_mode == 'easy':
+            print(f"You've selected {game_mode}, good luck!\n")
+            self.computer = ComputerPlayer('O')
+        elif game_mode == 'hard':
+            print(f"You've selected {game_mode}, try your hardest to beat the computer!\n")  # noqa
+            self.computer = GeniusComputerPlayer('O')
+        self.player = UserPlayer('X')
 
 # code credit: help on how to print a game board to the terminal was taken from https://stackoverflow.com/questions/44269612/python-drawing-a-tic-tac-toe-board  # noqa
 # and from: https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874  # noqa
@@ -138,10 +151,13 @@ class NoughtsAndCrosses:
 # end credit
 
 
-def play(game, x_player, o_player, print_game=True):
+def play(game_mode, print_game=True):
     """
     returns the winner of the game or None if it's a tie
     """
+
+    game = NoughtsAndCrosses(game_mode)
+
     if print_game:
         game.print_board_nums()
 
@@ -153,9 +169,9 @@ def play(game, x_player, o_player, print_game=True):
         gets move from appropriate player
         """
         if tag == 'O':
-            square = o_player.get_move(game)
+            square = game.computer.get_move(game)
         else:
-            square = x_player.get_move(game)
+            square = game.player.get_move(game)
 
         if game.make_move(square, tag):
             if print_game:
@@ -177,20 +193,6 @@ def play(game, x_player, o_player, print_game=True):
         time.sleep(2)  # a break in between moves to make the game more user friendly # noqa
     if print_game:
         print('It\'s a tie!')
-
-
-def run_easy_game():
-    x_player = UserPlayer('X')
-    o_player = ComputerPlayer('O')
-    n_and_c = NoughtsAndCrosses()
-    play(n_and_c, x_player, o_player, print_game=True)
-
-
-def run_hard_game():
-    x_player = UserPlayer('X')
-    o_player = GeniusComputerPlayer('O')
-    n_and_c = NoughtsAndCrosses()
-    play(n_and_c, x_player, o_player, print_game=True)
 
 
 def intro():
@@ -228,15 +230,11 @@ def intro():
     while True:
         difficulty = input("Please select a difficulty to continue. Type in 'easy', 'hard' or 'quit' to exit: \n").strip().lower()  # noqa
         time.sleep(2)
-        if difficulty == 'easy':
-            print(f"You've selected {difficulty}, good luck!\n")
-            run_easy_game()
-        elif difficulty == 'hard':
-            print(f"You've selected {difficulty}, try your hardest to beat the computer!\n")  # noqa
-            run_hard_game()
-        elif difficulty == 'quit':
+        if difficulty == 'quit':
             print(f"Thanks for playing {user}, goodbye!")
             break
+        elif difficulty == 'easy' or difficulty == 'hard':
+            play(difficulty)
         else:
             print("You need to enter a valid difficulty to continue...\n")
             continue
