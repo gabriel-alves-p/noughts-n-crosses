@@ -21,7 +21,22 @@ Gabriel Alves
   * [Implemented Features](#implemented-features)
   * [Future Features](#future-features)
 - [Design Documents](#design-documents)
-- [Data Model](#data-model)
+- [Classes](#classes)
+  * [BasePlayer](#baseplayer)
+    + [Properties](#properties)
+    + [Methods](#methods)
+  * [ComputerPlayer](#computerplayer)
+    + [Properties](#properties-1)
+    + [Methods](#methods-1)
+  * [UserPlayer](#userplayer)
+    + [Properties](#properties-2)
+    + [Methods](#methods-2)
+    + [GeniusComputerPlayer](#geniuscomputerplayer)
+    + [Properties](#properties-3)
+    + [Methods](#methods-3)
+  * [NoughtsNCrosses](#noughtsncrosses)
+    + [Properties](#properties-4)
+    + [Methods](#methods-4)
 - [Python Libraries](#python-libraries)
 - [Testing](#testing)
   * [Validation Testing](#validation-testing)
@@ -73,8 +88,8 @@ Gabriel Alves
 
 <br>
 
-- Difficulty choice. Here I give the user three options to proceed with the game. The choices are "easy", "hard" or "quit". With the "easy" choice, the user will be playing against a computer that randomly selects its moves, thus making it easily beaten. With the "hard" choice, the user will be playing against a genius computer which uses an algorithm to maximize its score whilst minimizing its losses, making it seemingly unbeatable. And ,finally,
-the "quit" options offers the user a way to exit the game. Each option prints its own personalized message to the user.
+- Difficulty choice. Here I give the user three options to proceed with the game. The choices are "easy", "hard" or "quit". With the "easy" choice, the user will be playing against a computer that randomly selects its moves, thus making it easily beaten. With the "hard" choice, the user will be playing against a genius computer which uses an algorithm to maximize its score whilst minimizing its losses, making it seemingly unbeatable. And, finally,
+the "quit" option offers the user a way to exit the game. Each option prints its own personalized message to the user.
 
 <img width="883" alt="easy-difficulty" src="https://user-images.githubusercontent.com/82375381/132223330-0db190d4-5a53-486c-9673-c8104b961a91.png">
 <img width="890" alt="hard-difficulty" src="https://user-images.githubusercontent.com/82375381/132223342-f1027e8a-1883-4275-9061-44b795427a42.png">
@@ -143,7 +158,7 @@ A computer player is the computer in easy games, it is an extension of the BaseP
 - **get_moves** For the easy game mode, the computer looks at the game's available moves and randomly chooses one.
 
 ### UserPlayer
-A User Player represents the human player. It is an extension of the BasePlayer.
+A User Player represents the human player. It is an extension of the BasePlayer class.
  
 #### Properties
 - **tag** The symbol to represent the human player, set to 'X' when the game is initialized.
@@ -155,13 +170,13 @@ A User Player represents the human player. It is an extension of the BasePlayer.
 When the user selects hard for the difficulty level, they play against the GeniusComputerPlayer which is an extension of the BasePlayer class.
  
 #### Properties
-- **tag** The symbol to represent the player, set to 'O' when the game is initialized
+- **tag** The symbol to represent the player, set to 'O' when the game is initialized.
  
 #### Methods
 - **get_moves** For the hard game mode, the computer looks at the game's available moves and strategically chooses corners and blocks the human player from winning. All games will end in the computer winning or tying the game.
-- **minimax** Keeps track of positions and score in dictionaries. Uses algorithm to simulate a game after previous move.Update position and score dictionary.
+- **minimax** Keeps track of positions and score in dictionaries. Uses an algorithm to simulate a game after the previous move. Update position and score dictionary.
 
-### Game
+### NoughtsNCrosses
 A representation of the game of tic-tac-toe.
  
 #### Properties
